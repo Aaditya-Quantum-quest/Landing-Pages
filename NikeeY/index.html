@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike - Your Feet Deserve The Best</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <svg height="40" viewBox="0 0 69 32" fill="none">
+                <path d="M68.5 5.5C61.5 2.5 48.5 0 40 0C35 0 27 0.5 21 2C14.5 3.5 8.5 6.5 3.5 10.5C-0.5 13.5 -1 16 0.5 17.5C2 19 5.5 18.5 9.5 16C14 13.5 19.5 11.5 25.5 10.5C32 9.5 39.5 9.5 45.5 11C52 12.5 57 15 60.5 18.5C64 22 65.5 25.5 65 28.5C64.5 31.5 61.5 32.5 57.5 31.5C53 30.5 47.5 27.5 41.5 24C35.5 20.5 29 17.5 23 16C17 14.5 12 14.5 8.5 16C5 17.5 3 20 3 23C3 26 5.5 28.5 9.5 30C13.5 31.5 18.5 31.5 24 30.5C29.5 29.5 35.5 27.5 41 24.5C46.5 21.5 51.5 18 55.5 14.5C59.5 11 62 7.5 63 4.5C64 1.5 63 0.5 61 0C59 -0.5 56 0 52.5 2C49 4 45.5 7 42.5 10.5C39.5 14 37.5 18 37 22C36.5 26 37.5 29 40 30.5C42.5 32 45.5 31.5 48.5 29C51.5 26.5 54 23 56 19C58 15 59.5 10.5 60.5 6.5C61.5 2.5 62 -1 61 -3.5" fill="black"/>
+            </svg>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#location">LOCATION</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button class="login-btn">Login</button>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>YOUR FEET DESERVE THE BEST</h1>
+            <p>YOUR FEET DESERVE THE BEST AND WE'RE HERE TO HELP YOU WITH OUR SHOES. YOUR FEET DESERVE THE BEST AND WE'RE HERE TO HELP YOU WITH OUR SHOES.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn-primary">Shop Now</button>
+                <button class="btn-secondary">Category</button>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://i.pinimg.com/736x/af/89/88/af8988f60161559ee2b919376dd42077.jpg" alt="Nike Shoe">
+        </div>
+    </section>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://www.facebook.com/nike" target="_blank" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+        </a>
+        <a href="https://www.instagram.com/nike" target="_blank" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+        </a>
+        <a href="https://www.youtube.com/nike" target="_blank" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
