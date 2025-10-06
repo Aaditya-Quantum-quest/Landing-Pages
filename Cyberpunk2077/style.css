@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+    max-width: 100%;
+}
+
+.main-container{
+    height: 100vh;
+    width: 100%;
+    background-image: url("psychedelic-paper-shapes-with-copy-space.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+/* NAV PART*/
+.logo{
+    height: 50px;
+    margin-left: 100px;
+    background-color:red;
+    background: transparent;
+    filter: ;
+}
+nav,ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 70px;
+}
+.first{
+    margin-left:250px;
+}
+nav ul li {
+    display: inline-block;
+    /* margin: 0px 45px; */
+}
+nav ul li a{
+    text-decoration-line: none;
+    color: white;
+    margin: 0px 40px;
+    font-weight: 500;
+    font-size: 20px;
+}
+.login-btn{
+    display:inline-block;
+    color: white;
+    text-decoration-line:none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.btn{
+     display:inline-block;
+    color: white;
+    font-size: 20px;
+    text-decoration-line:none;
+    margin-right: 30px;
+    background-image: linear-gradient(#ff8a00, #e52e71);
+    padding: 7px;
+    border-radius: 30px;
+    border-top-right-radius: 0px;   
+}
+/* NAV PART COMPLETED */
+
+/* MAIN CONTENT */
+
+.content{
+    margin-top: 14%;
+    max-width: 600px;
+    margin-left: 30px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+}
+.content h1 {
+    font-size: 80px;
+    font-family: sans-serif;
+}
+.join-btn{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 110px;
+    font-size: 25px;
+    /* background-image: linear-gradient(#ff8a00, #e52e71); */
+    background-color: black;
+    border-top-left-radius: 0px;
+    padding: 20px 100px;
+    border-radius: 40px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+
+.content img{
+    position: absolute;
+    top: 90px;
+    /* background-color: red; */
+    right: 20px;
+
+
+}
