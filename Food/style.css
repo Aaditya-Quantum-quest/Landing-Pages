@@ -1,0 +1,683 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #fff9e6 100%);
+     overflow-x: hidden;
+ }
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 25px 80px;
+ }
+
+ .logo {
+     font-size: 32px;
+     font-weight: 700;
+     color: #2d3436;
+ }
+
+ .logo span {
+     color: #7cb342;
+ }
+
+ .nav-menu {
+     display: flex;
+     gap: 45px;
+     list-style: none;
+     align-items: center;
+ }
+
+ .nav-menu li a {
+     text-decoration: none;
+     color: #636e72;
+     font-size: 16px;
+     font-weight: 500;
+     transition: color 0.3s;
+ }
+
+ .nav-menu li a:hover,
+ .nav-menu li a.active {
+     color: #7cb342;
+ }
+
+ .get-started-nav {
+     background: #7cb342;
+     color: white !important;
+     padding: 12px 30px;
+     border-radius: 8px;
+     transition: background 0.3s, transform 0.3s;
+     white-space: nowrap;
+ }
+
+ .get-started-nav:hover {
+     background: #689f38;
+     transform: translateY(-2px);
+ }
+
+ /* Mobile menu toggle */
+ .menu-toggle {
+     display: none;
+     flex-direction: column;
+     cursor: pointer;
+     gap: 4px;
+     padding: 8px;
+ }
+
+ .menu-toggle span {
+     width: 25px;
+     height: 3px;
+     background: #2d3436;
+     border-radius: 2px;
+     transition: all 0.3s ease;
+ }
+
+ .hero {
+     display: flex;
+     align-items: center;
+     padding: 60px 80px;
+     position: relative;
+     min-height: calc(100vh - 75px);
+ }
+
+ .hero-content {
+     flex: 1;
+     z-index: 2;
+     max-width: 600px;
+ }
+
+ .organic-badge {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     color: #7cb342;
+     font-size: 16px;
+     font-weight: 600;
+     margin-bottom: 20px;
+ }
+
+ .organic-badge::before {
+     content: '🥗';
+     font-size: 24px;
+ }
+
+ .hero-title {
+     font-size: 64px;
+     font-weight: 700;
+     line-height: 1.2;
+     color: #2d3436;
+     margin-bottom: 10px;
+ }
+
+ .hero-title .highlight {
+     color: #7cb342;
+ }
+
+ .hero-description {
+     font-size: 17px;
+     color: #636e72;
+     line-height: 1.6;
+     margin-top: 25px;
+     margin-bottom: 40px;
+     max-width: 500px;
+ }
+
+ .hero-buttons {
+     display: flex;
+     gap: 20px;
+     flex-wrap: wrap;
+ }
+
+ .btn-primary {
+     background: #7cb342;
+     color: white;
+     padding: 16px 40px;
+     border-radius: 8px;
+     border: none;
+     font-size: 17px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: background 0.3s, transform 0.3s;
+ }
+
+ .btn-primary:hover {
+     background: #689f38;
+     transform: translateY(-2px);
+ }
+
+ .btn-secondary {
+     background: transparent;
+     color: #2d3436;
+     padding: 16px 40px;
+     border-radius: 8px;
+     border: 2px solid #dfe6e9;
+     font-size: 17px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: border-color 0.3s, transform 0.3s;
+ }
+
+ .btn-secondary:hover {
+     border-color: #7cb342;
+     transform: translateY(-2px);
+ }
+
+ .hero-image {
+     flex: 1;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 600px;
+     border-radius: 50px;
+ }
+
+
+ .salad-image {
+     position: relative;
+     z-index: 3;
+     max-width: 100%;
+     width: 600px;
+     height: auto;
+     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+ }
+
+ .floating-leaf {
+     position: absolute;
+     width: 60px;
+     height: 60px;
+     animation: float 3s ease-in-out infinite;
+     font-size: 60px;
+ }
+
+ .leaf-1 {
+     top: 10%;
+     right: 40%;
+     animation-delay: 0s;
+ }
+
+ .leaf-2 {
+     top: 15%;
+     right: 25%;
+     animation-delay: 1s;
+ }
+
+ @keyframes float {
+
+     0%,
+     100% {
+         transform: translateY(0px) rotate(0deg);
+     }
+
+     50% {
+         transform: translateY(-20px) rotate(10deg);
+     }
+ }
+
+ .info-card {
+     position: absolute;
+     background: white;
+     padding: 20px;
+     border-radius: 15px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+     display: flex;
+     align-items: center;
+     gap: 15px;
+     z-index: 4;
+     min-width: 200px;
+ }
+
+ .chef-card {
+     bottom: 15%;
+     left: 5%;
+ }
+
+ .delivery-card {
+     bottom: 30%;
+     right: 10%;
+     background: #c8e6c9;
+ }
+
+ .customers-card {
+     top: 20%;
+     right: 5%;
+ }
+
+ .avatar-group {
+     display: flex;
+     margin-bottom: 8px;
+ }
+
+ .avatar {
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     border: 2px solid white;
+     margin-left: -10px;
+     object-fit: cover;
+ }
+
+ .avatar:first-child {
+     margin-left: 0;
+ }
+
+ .card-icon {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     object-fit: cover;
+     flex-shrink: 0;
+ }
+
+ .card-content h4 {
+     font-size: 16px;
+     color: #2d3436;
+     margin-bottom: 5px;
+ }
+
+ .card-content p {
+     font-size: 14px;
+     color: #636e72;
+ }
+
+ .rating {
+     color: #ffd700;
+     font-size: 14px;
+ }
+
+ .footer-badge {
+     position: absolute;
+     bottom: 30px;
+     right: 80px;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     font-size: 14px;
+     color: #636e72;
+ }
+
+ .footer-badge::before {
+     content: '⚡';
+     font-size: 20px;
+     background: #2d3436;
+     color: white;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ /* Large tablets and small desktops: 1025px - 1280px */
+ @media (max-width: 1280px) {
+     .navbar {
+         padding: 20px 60px;
+     }
+
+     .hero {
+         padding: 50px 60px;
+     }
+
+     .hero-title {
+         font-size: 56px;
+     }
+
+     .salad-image {
+         width: 500px;
+     }
+ }
+
+ /* Small desktops and laptops: 1025px - 1280px */
+ @media (max-width: 1024px) {
+     .navbar {
+         padding: 20px 40px;
+     }
+
+     .hero {
+         padding: 40px 40px;
+     }
+
+     .hero-title {
+         font-size: 52px;
+     }
+
+     .salad-image {
+         width: 450px;
+     }
+
+     .nav-menu {
+         gap: 30px;
+     }
+
+     .info-card {
+         padding: 15px;
+         min-width: 180px;
+     }
+ }
+
+ /* Large tablets: 769px - 1024px */
+ @media (max-width: 768px) {
+     .navbar {
+         padding: 20px 30px;
+         position: relative;
+     }
+
+     .menu-toggle {
+         display: flex;
+     }
+
+     .nav-menu {
+         position: absolute;
+         top: 100%;
+         left: 0;
+         right: 0;
+         background: white;
+         flex-direction: column;
+         gap: 0;
+         padding: 20px 30px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+         transform: translateY(-20px);
+         opacity: 0;
+         visibility: hidden;
+         transition: all 0.3s ease;
+     }
+
+     .nav-menu.active {
+         transform: translateY(0);
+         opacity: 1;
+         visibility: visible;
+     }
+
+     .nav-menu li {
+         width: 100%;
+         margin: 8px 0;
+     }
+
+     .nav-menu li a {
+         display: block;
+         padding: 12px 0;
+         text-align: center;
+         border-bottom: 1px solid #eee;
+     }
+
+     .get-started-nav {
+         margin-top: 10px;
+         text-align: center;
+         display: block;
+     }
+
+     .hero {
+         flex-direction: column;
+         padding: 30px 30px;
+         text-align: center;
+         min-height: auto;
+     }
+
+     .hero-content {
+         max-width: 100%;
+         margin-bottom: 40px;
+     }
+
+     .hero-title {
+         font-size: 42px;
+     }
+
+     .hero-buttons {
+         justify-content: center;
+     }
+
+     .hero-image {
+         margin-top: 40px;
+         height: 500px;
+         width: 100%;
+     }
+
+     .salad-image {
+         width: 350px;
+         max-width: 90%;
+     }
+
+     .info-card {
+         font-size: 12px;
+         padding: 12px;
+         min-width: 150px;
+     }
+
+     .chef-card {
+         bottom: 5%;
+         left: 2%;
+     }
+
+     .delivery-card {
+         bottom: 25%;
+         right: 2%;
+     }
+
+     .customers-card {
+         top: 10%;
+         right: 2%;
+     }
+
+     .footer-badge {
+         bottom: 10px;
+         right: 30px;
+     }
+
+     .floating-leaf {
+         width: 40px;
+         height: 40px;
+         font-size: 40px;
+     }
+ }
+
+ /* Small tablets and large phones: 481px - 768px */
+ @media (max-width: 640px) {
+     .navbar {
+         padding: 15px 20px;
+     }
+
+     .logo {
+         font-size: 28px;
+     }
+
+     .hero {
+         padding: 20px 20px;
+     }
+
+     .hero-title {
+         font-size: 36px;
+         line-height: 1.1;
+     }
+
+     .hero-description {
+         font-size: 16px;
+         margin-top: 20px;
+         margin-bottom: 30px;
+     }
+
+     .btn-primary,
+     .btn-secondary {
+         padding: 14px 28px;
+         font-size: 16px;
+         width: 100%;
+         margin-bottom: 10px;
+     }
+
+     .hero-buttons {
+         width: 100%;
+         flex-direction: column;
+     }
+
+     .hero-image {
+         height: 400px;
+         margin-top: 30px;
+     }
+
+     .salad-image {
+         width: 300px;
+         max-width: 85%;
+     }
+
+     .info-card {
+         padding: 10px;
+         min-width: 130px;
+         gap: 10px;
+     }
+
+     .card-icon {
+         width: 40px;
+         height: 40px;
+     }
+
+     .card-content h4 {
+         font-size: 14px;
+     }
+
+     .card-content p {
+         font-size: 12px;
+     }
+
+     .avatar {
+         width: 28px;
+         height: 28px;
+     }
+
+     .floating-leaf {
+         width: 35px;
+         height: 35px;
+         font-size: 35px;
+     }
+
+     .footer-badge {
+         bottom: 5px;
+         right: 20px;
+         font-size: 12px;
+     }
+ }
+
+ /* Small mobile phones: 320px - 480px */
+ @media (max-width: 480px) {
+     .navbar {
+         padding: 12px 15px;
+     }
+
+     .logo {
+         font-size: 24px;
+     }
+
+     .hero {
+         padding: 15px 15px;
+     }
+
+     .hero-title {
+         font-size: 32px;
+     }
+
+     .organic-badge {
+         font-size: 14px;
+     }
+
+     .organic-badge::before {
+         font-size: 20px;
+     }
+
+     .hero-description {
+         font-size: 15px;
+     }
+
+     .btn-primary,
+     .btn-secondary {
+         padding: 12px 24px;
+         font-size: 15px;
+     }
+
+     .hero-image {
+         height: 350px;
+         margin-top: 25px;
+     }
+
+     .salad-image {
+         width: 280px;
+         max-width: 95%;
+     }
+
+     .info-card {
+         padding: 8px;
+         min-width: 110px;
+         gap: 8px;
+     }
+
+     .chef-card {
+         bottom: 8%;
+         left: 1%;
+     }
+
+     .delivery-card {
+         bottom: 30%;
+         right: 1%;
+     }
+
+     .customers-card {
+         top: 15%;
+         right: 1%;
+     }
+
+     .card-icon {
+         width: 35px;
+         height: 35px;
+     }
+
+     .card-content h4 {
+         font-size: 13px;
+     }
+
+     .card-content p {
+         font-size: 11px;
+     }
+
+     .avatar {
+         width: 25px;
+         height: 25px;
+     }
+
+     .floating-leaf {
+         width: 30px;
+         height: 30px;
+         font-size: 30px;
+     }
+ }
+
+ /* Extra small devices: less than 360px */
+ @media (max-width: 360px) {
+     .hero-title {
+         font-size: 28px;
+     }
+
+     .salad-image {
+         width: 250px;
+     }
+
+     .hero-image {
+         height: 320px;
+     }
+
+     .info-card {
+         min-width: 100px;
+         padding: 6px;
+     }
+
+     .card-content h4 {
+         font-size: 12px;
+     }
+
+     .card-content p {
+         font-size: 10px;
+     }
+ }
